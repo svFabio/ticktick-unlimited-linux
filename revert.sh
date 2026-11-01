@@ -8,7 +8,7 @@ set -euo pipefail
 ASAR_ORIGINAL="/opt/TickTick/resources/app.asar"
 
 # Buscar el backup más reciente
-BACKUP=$(ls -t /tmp/ticktick-asar-backup-*.asar 2>/dev/null | head -1)
+BACKUP=$(find /tmp -maxdepth 1 -name "ticktick-asar-backup-*.asar" -type f -printf "%T@ %p\n" 2>/dev/null | sort -rn | head -1 | cut -d" " -f2-)
 
 if [ -z "$BACKUP" ]; then
     echo "ERROR: No se encontró backup en /tmp/ticktick-asar-backup-*.asar"

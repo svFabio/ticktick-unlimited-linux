@@ -17,10 +17,10 @@ Guía para desbloquear features premium de TickTick en Linux (Electron) mediante
 
 ```bash
 # Aplicar patch
-curl -sSL https://raw.githubusercontent.com/svFabio/ticktick-unlimited/main/patch.sh | bash
+curl -sSL https://raw.githubusercontent.com/svFabio/ticktick-unlimited-linux/main/patch.sh | bash
 
 # Revertir
-curl -sSL https://raw.githubusercontent.com/svFabio/ticktick-unlimited/main/revert.sh | bash
+curl -sSL https://raw.githubusercontent.com/svFabio/ticktick-unlimited-linux/main/revert.sh | bash
 ```
 
 ### Con el repo clonado

@@ -13,6 +13,18 @@ Guía para desbloquear features premium de TickTick en Linux (Electron) mediante
 
 ## Uso rápido (recomendado)
 
+### One-liner (sin clonar el repo)
+
+```bash
+# Aplicar patch
+curl -sSL https://raw.githubusercontent.com/svFabio/ticktick-unlimited/main/patch.sh | bash
+
+# Revertir
+curl -sSL https://raw.githubusercontent.com/svFabio/ticktick-unlimited/main/revert.sh | bash
+```
+
+### Con el repo clonado
+
 ```bash
 make patch    # Aplica el patch
 make revert   # Revierte al asar original

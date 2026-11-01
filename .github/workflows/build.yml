@@ -1,0 +1,27 @@
+name: Validate scripts
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Lint shell scripts
+        run: shellcheck patch.sh revert.sh
+
+      - name: Check Python syntax
+        run: python3 -c "import ast; ast.parse(open('src/disable_alert.py').read())"
+
+      - name: Verify README exists
+        run: test -f README.md

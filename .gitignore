@@ -1,0 +1,15 @@
+# Build artifacts
+*.so
+*.o
+*.dylib
+dist/
+artifacts/
+
+# Temp files
+/tmp/
+*.asar
+*.asar.patched
+
+# OS
+.DS_Store
+Thumbs.db
